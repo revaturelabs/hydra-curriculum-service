@@ -1,0 +1,74 @@
+server:
+  port: 9093
+spring:
+  application:
+    name: curriculumService
+  cloud:
+    services:
+      registrationMethod: route
+  datasource:
+# JUN'S ELEPHANT SQL
+#    url: jdbc:postgresql://baasu.db.elephantsql.com:5432/qfnqeflg
+#    username: qfnqeflg
+#    password: hna9MVG8qUcelIjDsWmRrDJFM0RZrVMG
+#    driverClassName: org.postgresql.Driver
+#    tomcat:
+#          max-active: 3
+
+# ELEPHANT SQL PCF
+    url: jdbc:postgresql://baasu.db.elephantsql.com:5432/whmpsxcx
+    username: whmpsxcx
+    password: 8hwWKLx4g7H7s3rqhvOOSSD-RI9HFbeo
+    driverClassName: org.postgresql.Driver
+    tomcat:
+          max-active: 2
+
+
+# Oracle DB assignforce dev
+    #username: assignforce_dev
+    #password: pVCwxTn3
+    #url: jdbc:oracle:thin:@assignforce.chueiwozbnfz.us-east-1.rds.amazonaws.com:1521:ORCL
+
+# ORACLE DB with Env Var
+#    username: ${DB_USER}
+#    password: ${DB_PASSWORD}
+#    url: ${DB_URL}
+#
+#    username: ${RDS_USER}
+#    password: ${RDS_PASS}
+#    url: ${RDS_URL}
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+#        database-platform: org.hibernate.dialect.Oracle10gDialect
+producer:
+  ribbon:
+    ServerListRefreshInterval: 5000
+ribbon:
+  isSecure: false
+security:
+  basic:
+    enabled: false
+
+# debug: true
+
+salesforce:
+  oauth2:
+    client:
+      clientId: 3MVG9ahGHqp.k2_wb8eUMtoR38zX8fWod2YBcK5.4RRrWling4BGamz7JanMJTUGcXxI9qda4fQh3xU0Q9EBH
+      clientSecret: ${OAUTH_CLIENT_SECRET}
+      accessTokenUri: https://revature--int1.cs17.my.salesforce.com/services/oauth2/token
+      revokeTokenUri: https://revature--int1.cs17.my.salesforce.com/services/oauth2/revoke
+      userAuthorizationUri: https://revature--int1.cs17.my.salesforce.com/services/oauth2/authorize?prompt=login
+      tokenName: authorization_code
+      authenticationScheme: header
+      clientAuthenticationScheme: form
+      grantType: authorization_code
+      preEstablishedRedirectUri: https://assignforcebackend.cfapps.io/login
+    resource:
+      userInfoUri: https://revature--int1.cs17.my.salesforce.com/services/oauth2/userinfo
+frontEndUrl: https://assignforcefrontend.cfapps.io/
+tokenEncryption:
+  password: ${ENC_PASS}
+  salt: ${ENC_SALT}
+
