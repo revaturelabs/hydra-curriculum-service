@@ -1,4 +1,4 @@
-package com.revature.curriculumservice.domain.dao;
+package com.revature.hydra.curriculum.data;
 
 
 import org.springframework.data.jpa.repository.Query;

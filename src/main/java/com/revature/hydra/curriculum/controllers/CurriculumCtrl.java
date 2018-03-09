@@ -1,10 +1,11 @@
-package com.revature.curriculumservice.web;
+package com.revature.hydra.curriculum.controllers;
 
-import com.revature.curriculumservice.domain.Curriculum;
-import com.revature.curriculumservice.domain.dto.CurriculumDTO;
-import com.revature.curriculumservice.domain.dto.ResponseErrorDTO;
-import com.revature.curriculumservice.service.ActivatableObjectDaoService;
-import com.revature.curriculumservice.service.CurriculumDaoService;
+import com.revature.beans.Curriculum;
+import com.revature.hydra.curriculum.service.ActivatableObjectDaoService;
+import com.revature.hydra.curriculum.service.CurriculumDaoService;
+import com.revature.hydra.curriculum.transfer.CurriculumDTO;
+import com.revature.hydra.curriculum.transfer.ResponseErrorDTO;
+
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -25,7 +26,7 @@ import java.util.List;
 // @CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/v2/curriculum")
-@ComponentScan(basePackages="com.revature.curriculumservice.service")
+@ComponentScan(basePackages="com.revature.hydra.curriculum.service")
 @Api(value = "Curriculum Controller", description = "Operations regarding Curricula")
 public class CurriculumCtrl {
 

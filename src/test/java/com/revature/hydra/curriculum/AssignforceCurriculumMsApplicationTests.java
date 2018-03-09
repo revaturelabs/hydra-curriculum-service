@@ -1,4 +1,4 @@
-package com.revature.curriculumservice;
+package com.revature.hydra.curriculum;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

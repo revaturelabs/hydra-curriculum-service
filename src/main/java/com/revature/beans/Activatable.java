@@ -1,4 +1,4 @@
-package com.revature.curriculumservice.domain;
+package com.revature.beans;
 
 /**
  * Created by August Duet on 11/29/2016.

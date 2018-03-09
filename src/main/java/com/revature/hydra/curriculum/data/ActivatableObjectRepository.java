@@ -1,7 +1,8 @@
-package com.revature.curriculumservice.domain.dao;
+package com.revature.hydra.curriculum.data;
 
-import com.revature.curriculumservice.domain.Activatable;
 import org.springframework.data.repository.NoRepositoryBean;
+
+import com.revature.beans.Activatable;
 
 import java.io.Serializable;
 import java.util.List;

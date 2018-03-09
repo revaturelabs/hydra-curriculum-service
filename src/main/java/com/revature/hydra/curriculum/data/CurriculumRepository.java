@@ -1,8 +1,9 @@
-package com.revature.curriculumservice.domain.dao;
+package com.revature.hydra.curriculum.data;
 
-import com.revature.curriculumservice.domain.Curriculum;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
+
+import com.revature.beans.Curriculum;
 
 import java.util.List;
 

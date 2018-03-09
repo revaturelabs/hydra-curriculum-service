@@ -1,4 +1,4 @@
-package com.revature.curriculumservice.domain;
+package com.revature.beans;
 
 import javax.persistence.*;
 import java.util.List;

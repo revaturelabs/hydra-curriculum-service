@@ -1,7 +1,8 @@
-package com.revature.curriculumservice.service;
+package com.revature.hydra.curriculum.service;
 
-import com.revature.curriculumservice.domain.Activatable;
-import com.revature.curriculumservice.domain.dao.ActivatableObjectRepository;
+import com.revature.beans.Activatable;
+import com.revature.hydra.curriculum.data.ActivatableObjectRepository;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 

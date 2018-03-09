@@ -2,7 +2,7 @@ server:
   port: 9093
 spring:
   application:
-    name: curriculumService
+    name: hydra-curriculum-service
   cloud:
     services:
       registrationMethod: route

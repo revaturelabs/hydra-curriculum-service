@@ -1,12 +1,13 @@
-package com.revature.curriculumservice.web;
+package com.revature.hydra.curriculum.test.web;
 
 
-import com.revature.curriculumservice.CurriculumServiceApplication;
-import com.revature.curriculumservice.domain.Curriculum;
-import com.revature.curriculumservice.domain.dto.CurriculumDTO;
-import com.revature.curriculumservice.service.ActivatableObjectDaoService;
-import com.revature.curriculumservice.service.CurriculumDaoService;
-import com.revature.curriculumservice.utils.JsonMaker;
+import com.revature.beans.Curriculum;
+import com.revature.hydra.curriculum.CurriculumServiceApplication;
+import com.revature.hydra.curriculum.service.ActivatableObjectDaoService;
+import com.revature.hydra.curriculum.service.CurriculumDaoService;
+import com.revature.hydra.curriculum.test.utils.JsonMaker;
+import com.revature.hydra.curriculum.transfer.CurriculumDTO;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

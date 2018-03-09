@@ -1,4 +1,4 @@
-package com.revature.curriculumservice.domain.dto;
+package com.revature.hydra.curriculum.transfer;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

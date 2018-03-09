@@ -1,4 +1,4 @@
-package com.revature.curriculumservice.utils;
+package com.revature.hydra.curriculum.test.utils;
 
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
