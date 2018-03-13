@@ -1,4 +1,4 @@
-package com.revature.hydra.curriculum.controllers;
+package com.revature.hydra.curriculum.controller;
 
 import com.revature.beans.Curriculum;
 import com.revature.hydra.curriculum.service.ActivatableObjectDaoService;

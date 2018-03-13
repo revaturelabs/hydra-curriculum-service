@@ -10,14 +10,14 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.revature.hydra.curriculum.controllers.CurriculumCtrl;
+import com.revature.hydra.curriculum.controller.CurriculumCtrl;
 
 /*
 @SpringBootApplication(scanBasePackages = {"com.revature.hydra.curriculum",
 		"com.revature.assignforcecommon.security"},
 		exclude = {MongoAutoConfiguration.class, MongoDataAutoConfiguration.class})
 */
-@SpringBootApplication(scanBasePackages = {"com.revature"},
+@SpringBootApplication(scanBasePackages = {"com.revature.hydra"},
 	exclude = {MongoAutoConfiguration.class, MongoDataAutoConfiguration.class})
 @RestController
 @EnableDiscoveryClient

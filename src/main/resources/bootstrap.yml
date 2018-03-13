@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: curriculum
+  cloud:
+    config:
+      uri: http://35.182.214.189:8888
