@@ -1,11 +1,11 @@
 package com.revature.hydra.curriculum.data;
 
-import org.springframework.data.jpa.repository.Query;
+import java.util.List;
+
+
 import org.springframework.stereotype.Repository;
 
 import com.revature.beans.Curriculum;
-
-import java.util.List;
 
 @Repository
 public interface CurriculumRepository extends ActivatableObjectRepository<Curriculum, Integer> {

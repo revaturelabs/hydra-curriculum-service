@@ -1,6 +1,7 @@
 package com.revature.hydra.curriculum.service;
 
 import com.revature.beans.Activatable;
+
 import com.revature.hydra.curriculum.data.ActivatableObjectRepository;
 
 import org.apache.log4j.Logger;

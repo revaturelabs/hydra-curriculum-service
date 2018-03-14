@@ -1,6 +1,7 @@
 package com.revature.hydra.curriculum.service;
 
 import com.revature.beans.Curriculum;
+
 import com.revature.hydra.curriculum.data.CurriculumRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
