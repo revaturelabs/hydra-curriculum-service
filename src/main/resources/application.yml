@@ -7,40 +7,23 @@ spring:
     services:
       registrationMethod: route
   datasource:
-# JUN'S ELEPHANT SQL
-#    url: jdbc:postgresql://baasu.db.elephantsql.com:5432/qfnqeflg
-#    username: qfnqeflg
-#    password: hna9MVG8qUcelIjDsWmRrDJFM0RZrVMG
-#    driverClassName: org.postgresql.Driver
-#    tomcat:
-#          max-active: 3
-
-# ELEPHANT SQL PCF
     url: jdbc:postgresql://baasu.db.elephantsql.com:5432/whmpsxcx
     username: whmpsxcx
     password: 8hwWKLx4g7H7s3rqhvOOSSD-RI9HFbeo
     driverClassName: org.postgresql.Driver
     tomcat:
           max-active: 2
-
-
-# Oracle DB assignforce dev
-    #username: assignforce_dev
-    #password: pVCwxTn3
-    #url: jdbc:oracle:thin:@assignforce.chueiwozbnfz.us-east-1.rds.amazonaws.com:1521:ORCL
-
-# ORACLE DB with Env Var
-#    username: ${DB_USER}
-#    password: ${DB_PASSWORD}
-#    url: ${DB_URL}
-#
-#    username: ${RDS_USER}
-#    password: ${RDS_PASS}
-#    url: ${RDS_URL}
-
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
-#        database-platform: org.hibernate.dialect.Oracle10gDialect
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+  client:
+    serviceUrl:
+      defaultZone: http://35.183.1.239:8761/eureka/
+
 producer:
   ribbon:
     ServerListRefreshInterval: 5000
@@ -50,7 +33,6 @@ security:
   basic:
     enabled: false
 
-# debug: true
 
 rabbitmq:
   host: 35.183.27.227
