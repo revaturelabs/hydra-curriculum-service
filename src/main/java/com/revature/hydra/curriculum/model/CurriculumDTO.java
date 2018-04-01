@@ -5,10 +5,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 import java.util.List;
 
-import javax.persistence.Entity;
-
 @ApiModel("Curriculum")
-@Entity
 public class CurriculumDTO {
 
 	@ApiModelProperty(notes = "The Curriculum ID", name = "currID", dataType = "int")

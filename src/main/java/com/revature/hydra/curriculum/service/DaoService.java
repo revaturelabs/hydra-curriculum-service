@@ -11,10 +11,16 @@ import java.io.Serializable;
 import java.util.List;
 
 @Service
-public abstract class DaoService<T, ID extends Serializable>{
+public class DaoService<T, ID extends Serializable>{
+
+	protected BaseRepository<T, ID> repo;
+
+	DaoService() {}
 
 	@Autowired
-	protected BaseRepository<T, ID> repo;
+	DaoService(BaseRepository<T, ID> repo) {
+		this.repo = repo;
+	}
 
 	public T saveItem(T persisted) { return repo.save(persisted); }
 

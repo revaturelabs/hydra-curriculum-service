@@ -15,7 +15,7 @@ import java.util.List;
 @Service
 public class ActivatableObjectDaoService<T extends Activatable, ID extends Serializable> extends DaoService<T, ID>{
 
-
+    @Autowired
     protected ActivatableObjectRepository<T, ID> repo;
 
     @Autowired

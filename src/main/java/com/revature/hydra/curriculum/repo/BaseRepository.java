@@ -9,7 +9,6 @@ import org.springframework.stereotype.Repository;
 import java.io.Serializable;
 import java.util.List;
 
-// @NoRepositoryBean
-@Repository
+@NoRepositoryBean
 public interface BaseRepository<T, ID extends Serializable> extends CrudRepository<T, ID> {
 }

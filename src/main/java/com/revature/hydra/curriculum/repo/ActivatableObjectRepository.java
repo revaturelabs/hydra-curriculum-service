@@ -10,8 +10,7 @@ import java.util.List;
 /**
  * Created by August Duet on 11/29/2016.
  */
-// @NoRepositoryBean
-@Repository
+@NoRepositoryBean
 public interface ActivatableObjectRepository<T extends Activatable, ID extends Serializable> extends BaseRepository<T, ID>{
     List<T> findByActiveIsTrue();
 }

@@ -2,8 +2,8 @@ package com.revature.hydra.curriculum.web;
 
 
 import com.revature.hydra.curriculum.CurriculumServiceApplication;
-import com.revature.hydra.curriculum.domain.Curriculum;
-import com.revature.hydra.curriculum.domain.dto.CurriculumDTO;
+import com.revature.hydra.curriculum.model.Curriculum;
+import com.revature.hydra.curriculum.model.CurriculumDTO;
 import com.revature.hydra.curriculum.service.ActivatableObjectDaoService;
 import com.revature.hydra.curriculum.service.CurriculumDaoService;
 import com.revature.hydra.curriculum.utils.JsonMaker;
