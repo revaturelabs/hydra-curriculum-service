@@ -1,4 +1,4 @@
-package com.revature.curriculumservice.domain;
+package com.revature.hydra.curriculum.domain;
 
 /**
  * Created by August Duet on 11/29/2016.

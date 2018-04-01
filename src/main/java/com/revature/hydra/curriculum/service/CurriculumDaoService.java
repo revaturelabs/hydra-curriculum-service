@@ -1,7 +1,7 @@
-package com.revature.curriculumservice.service;
+package com.revature.hydra.curriculum.service;
 
-import com.revature.curriculumservice.domain.Curriculum;
-import com.revature.curriculumservice.domain.dao.CurriculumRepository;
+import com.revature.hydra.curriculum.model.Curriculum;
+import com.revature.hydra.curriculum.repo.CurriculumRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

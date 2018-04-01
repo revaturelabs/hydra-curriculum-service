@@ -1,6 +1,9 @@
-package com.revature.curriculumservice.domain;
+package com.revature.hydra.curriculum.model;
 
 import javax.persistence.*;
+
+import com.revature.hydra.curriculum.domain.Activatable;
+
 import java.util.List;
 
 

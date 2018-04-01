@@ -1,10 +1,10 @@
-package com.revature.curriculumservice.web;
+package com.revature.hydra.curriculum.web;
 
-import com.revature.curriculumservice.domain.Curriculum;
-import com.revature.curriculumservice.domain.dto.CurriculumDTO;
-import com.revature.curriculumservice.domain.dto.ResponseErrorDTO;
-import com.revature.curriculumservice.service.ActivatableObjectDaoService;
-import com.revature.curriculumservice.service.CurriculumDaoService;
+import com.revature.hydra.curriculum.model.Curriculum;
+import com.revature.hydra.curriculum.model.CurriculumDTO;
+import com.revature.hydra.curriculum.model.ResponseErrorDTO;
+import com.revature.hydra.curriculum.service.ActivatableObjectDaoService;
+import com.revature.hydra.curriculum.service.CurriculumDaoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;

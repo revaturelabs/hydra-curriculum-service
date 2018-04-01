@@ -1,11 +1,14 @@
-package com.revature.curriculumservice.domain.dto;
+package com.revature.hydra.curriculum.model;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.util.List;
 
+import javax.persistence.Entity;
+
 @ApiModel("Curriculum")
+@Entity
 public class CurriculumDTO {
 
 	@ApiModelProperty(notes = "The Curriculum ID", name = "currID", dataType = "int")

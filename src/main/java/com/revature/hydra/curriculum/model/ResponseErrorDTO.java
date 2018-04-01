@@ -1,9 +1,12 @@
-package com.revature.curriculumservice.domain.dto;
+package com.revature.hydra.curriculum.model;
+
+import javax.persistence.Entity;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 @ApiModel("ResponseError")
+@Entity
 public class ResponseErrorDTO {
 
 	@ApiModelProperty(notes = "The current error message", name = "errorMessage", dataType = "String")

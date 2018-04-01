@@ -1,14 +1,16 @@
-package com.revature.curriculumservice.service;
+package com.revature.hydra.curriculum.service;
 
-import com.revature.curriculumservice.domain.Activatable;
-import com.revature.curriculumservice.domain.dao.ActivatableObjectRepository;
-import com.revature.curriculumservice.domain.dao.BaseRepository;
-import com.revature.curriculumservice.domain.dao.CurriculumRepository;
+import com.revature.hydra.curriculum.domain.Activatable;
+import com.revature.hydra.curriculum.repo.ActivatableObjectRepository;
+import com.revature.hydra.curriculum.repo.BaseRepository;
+import com.revature.hydra.curriculum.repo.CurriculumRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.io.Serializable;
 import java.util.List;
 
+@Service
 public abstract class DaoService<T, ID extends Serializable>{
 
 	@Autowired

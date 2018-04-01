@@ -1,4 +1,4 @@
-package com.revature.curriculumservice.config;
+package com.revature.hydra.curriculum.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

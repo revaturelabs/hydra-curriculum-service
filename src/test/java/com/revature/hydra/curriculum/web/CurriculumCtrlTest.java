@@ -1,12 +1,12 @@
-package com.revature.curriculumservice.web;
+package com.revature.hydra.curriculum.web;
 
 
-import com.revature.curriculumservice.CurriculumServiceApplication;
-import com.revature.curriculumservice.domain.Curriculum;
-import com.revature.curriculumservice.domain.dto.CurriculumDTO;
-import com.revature.curriculumservice.service.ActivatableObjectDaoService;
-import com.revature.curriculumservice.service.CurriculumDaoService;
-import com.revature.curriculumservice.utils.JsonMaker;
+import com.revature.hydra.curriculum.CurriculumServiceApplication;
+import com.revature.hydra.curriculum.domain.Curriculum;
+import com.revature.hydra.curriculum.domain.dto.CurriculumDTO;
+import com.revature.hydra.curriculum.service.ActivatableObjectDaoService;
+import com.revature.hydra.curriculum.service.CurriculumDaoService;
+import com.revature.hydra.curriculum.utils.JsonMaker;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -75,7 +75,7 @@ public class CurriculumCtrlTest {
     // @WithMockUser
     public void createCurriculumTest() throws Exception {
         given(currService.saveItem(any(Curriculum.class))).willReturn(curriculumTest);
-        mvc.perform(post("/api/v2/curriculum")
+        mvc.perform(post("/curriculum")
                 
                 .contentType(MediaType.APPLICATION_JSON_VALUE)
                 .content(jsonMaker.toJsonString(curriculumTest)))
@@ -86,7 +86,7 @@ public class CurriculumCtrlTest {
     // @WithMockUser
     public void createCurriculumWithEmptyDTOTest() throws Exception {
         given(currService.saveItem(any(Curriculum.class))).willReturn(null);
-        mvc.perform(post("/api/v2/curriculum")
+        mvc.perform(post("/curriculum")
                 
                 .contentType(MediaType.APPLICATION_JSON_VALUE)
                 .content(jsonMaker.toJsonString(curriculumTest)))
@@ -97,7 +97,7 @@ public class CurriculumCtrlTest {
     // @WithMockUser
     public void createCurriculumWithNullDTOTest() throws Exception {
         given(currService.saveItem(any(Curriculum.class))).willReturn(null);
-        mvc.perform(post("/api/v2/curriculum")
+        mvc.perform(post("/curriculum")
                 
                 .contentType(MediaType.APPLICATION_JSON_VALUE))
                 .andExpect(status().isBadRequest());
@@ -107,7 +107,7 @@ public class CurriculumCtrlTest {
     // @WithMockUser
     public void retrieveCurriculumTest() throws Exception {
         given(currService.getOneItem(any(Integer.class))).willReturn(curriculumTest);
-        mvc.perform(get("/api/v2/curriculum/1")
+        mvc.perform(get("/curriculum/1")
                 
                 .contentType(MediaType.APPLICATION_JSON_VALUE))
                 .andExpect(status().isOk())
@@ -120,7 +120,7 @@ public class CurriculumCtrlTest {
     // @WithMockUser
     public void retrieveCurriculumWithBadIdTest() throws Exception {
         given(currService.getOneItem(any(Integer.class))).willReturn(null);
-        mvc.perform(get("/api/v2/curriculum/1")
+        mvc.perform(get("curriculum/1")
                 
                 .contentType(MediaType.APPLICATION_JSON_VALUE))
                 .andExpect(status().isNotFound());
@@ -130,7 +130,7 @@ public class CurriculumCtrlTest {
     // @WithMockUser
     public void updateCurriculumTest() throws Exception {
         given(currService.saveItem(any(Curriculum.class))).willReturn(curriculumTest);
-        mvc.perform(put("/api/v2/curriculum")
+        mvc.perform(put("/curriculum")
                 
                 .contentType(MediaType.APPLICATION_JSON_VALUE)
                 .content(jsonMaker.toJsonString(curriculumTest)))
@@ -142,7 +142,7 @@ public class CurriculumCtrlTest {
     public void updateCurriculumWithEmptyDTOTest() throws Exception {
         curriculumTest = new Curriculum();
         given(currService.saveItem(any(Curriculum.class))).willReturn(null);
-        mvc.perform(put("/api/v2/curriculum")
+        mvc.perform(put("/curriculum")
                 
                 .contentType(MediaType.APPLICATION_JSON_VALUE)
                 .content(jsonMaker.toJsonString(curriculumTest)))
@@ -154,7 +154,7 @@ public class CurriculumCtrlTest {
     public void updateCurriculumWithNullDTOTest() throws Exception {
         curriculumTest = new Curriculum();
         given(currService.saveItem(any(Curriculum.class))).willReturn(null);
-        mvc.perform(put("/api/v2/curriculum")
+        mvc.perform(put("/curriculum")
                 
                 .contentType(MediaType.APPLICATION_JSON_VALUE)
                 .content(""))
@@ -165,7 +165,7 @@ public class CurriculumCtrlTest {
     // @WithMockUser
     public void deleteCurriculumTest() throws Exception {
         doNothing().when(currService).deleteItem(any(Integer.class));
-        mvc.perform(delete("/api/v2/curriculum/1")
+        mvc.perform(delete("/curriculum/1")
                 )
                 .andExpect(status().isOk());
     }
@@ -176,7 +176,7 @@ public class CurriculumCtrlTest {
         List<Curriculum> curricula = new ArrayList<>();
         curricula.add(curriculumTest);
         given(currService.getAllItems()).willReturn(curricula);
-        mvc.perform(get("/api/v2/curriculum")
+        mvc.perform(get("/curriculum")
                 )
                 .andExpect(status().isOk());
     }
@@ -186,7 +186,7 @@ public class CurriculumCtrlTest {
     public void retrieveAllCurriculaWithEmptyListTest() throws Exception {
         List<Curriculum> curricula = new ArrayList<>();
         given(currService.getAllItems()).willReturn(curricula);
-        mvc.perform(get("/api/v2/curriculum")
+        mvc.perform(get("/curriculum")
                 )
                 .andExpect(status().isNotFound());
     }
@@ -195,7 +195,7 @@ public class CurriculumCtrlTest {
     // @WithMockUser
     public void retrieveAllCurriculaReturnNullTest() throws Exception {
         given(currService.getAllItems()).willReturn(null);
-        mvc.perform(get("/api/v2/curriculum")
+        mvc.perform(get("/curriculum")
                 )
                 .andExpect(status().isNotFound());
     }
