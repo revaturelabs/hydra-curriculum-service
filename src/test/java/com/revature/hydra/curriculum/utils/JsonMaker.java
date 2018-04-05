@@ -6,26 +6,26 @@ import com.google.gson.GsonBuilder;
 
 public class JsonMaker {
 
-    private Gson gson = null;
+  private Gson gson = null;
 
-    public JsonMaker(){
-         gson = new GsonBuilder()
-                .serializeNulls()
-                .setFieldNamingPolicy(FieldNamingPolicy.IDENTITY)
-                .setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
-                .create();
-    }
+  public JsonMaker() {
+    gson = new GsonBuilder()
+        .serializeNulls()
+        .setFieldNamingPolicy(FieldNamingPolicy.IDENTITY)
+        .setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
+        .create();
+  }
 
-    public String toJsonString(Object anObject){
-        try {
-            return getGson().toJson(anObject);
-        }catch (NullPointerException ex){
-            return "";
-        }
+  public String toJsonString(Object anObject) {
+    try {
+      return getGson().toJson(anObject);
+    } catch (NullPointerException ex) {
+      return "";
     }
+  }
 
-    public Gson getGson() {
-        return gson;
-    }
+  public Gson getGson() {
+    return gson;
+  }
 
 }

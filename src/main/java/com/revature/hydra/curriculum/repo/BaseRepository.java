@@ -10,5 +10,6 @@ import java.io.Serializable;
 import java.util.List;
 
 @NoRepositoryBean
+@Repository
 public interface BaseRepository<T, ID extends Serializable> extends CrudRepository<T, ID> {
 }

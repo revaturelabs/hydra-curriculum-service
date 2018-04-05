@@ -86,7 +86,7 @@ public class CurriculumCtrl {
 	// 		@ApiResponse(code=400, message ="Bad Request, the information recieved maybe invalid"),
 	// 		@ApiResponse(code=500, message ="Cannot update Curriculum information")
 	// })
-	@PutMapping
+	@PutMapping("/{id}")
 	public Object updateCurriculum( @RequestBody CurriculumDTO in ) {
 		Integer id = in.getCurrId();
 		id = (id != null)? in.getCurrId() : 0;
