@@ -1,9 +1,16 @@
 spring:
+  profiles:
+    active: curriculumservice
+
+---
+
+spring:
   application:
     name: curriculum
   cloud:
     services:
       registrationMethod: direct
+  profiles: curriculumservice
 
 eureka:
   client:
@@ -22,3 +29,20 @@ security:
 server:
   servlet:
     contextPath: /v0
+
+---
+
+spring:
+  profiles: test
+  datasource:
+    url: jdbc:h2:mem:test
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+eureka:
+  client:
+    enabled: false
+security:
+  basic:
+    enabled: false
