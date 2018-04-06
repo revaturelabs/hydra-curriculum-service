@@ -1,0 +1,5 @@
+---
+applications:
+- name: curriculum
+  path: ./target/curriculum-0.0.1.jar
+  no-route: true

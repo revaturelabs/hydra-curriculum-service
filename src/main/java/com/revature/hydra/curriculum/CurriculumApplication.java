@@ -2,14 +2,11 @@ package com.revature.hydra.curriculum;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
-@EnableDiscoveryClient
-public class CurriculumServiceApplication {
+public class CurriculumApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CurriculumServiceApplication.class, args);
+		SpringApplication.run(CurriculumApplication.class, args);
 	}
-
 }
