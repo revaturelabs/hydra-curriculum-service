@@ -1,16 +1,16 @@
 spring:
   profiles:
-    active: curriculumservice
+    active: production
 
 ---
 
 spring:
+  profiles: production
   application:
     name: curriculum
   cloud:
     services:
       registrationMethod: direct
-  profiles: curriculumservice
   jpa:
     hibernate:
       ddl-auto: update
