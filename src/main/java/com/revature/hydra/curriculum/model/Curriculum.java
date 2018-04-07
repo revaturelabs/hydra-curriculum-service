@@ -1,18 +1,18 @@
 package com.revature.hydra.curriculum.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
+import java.util.List;
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@EqualsAndHashCode(exclude = "skills")
+@ToString(exclude = "skills")
 public class Curriculum {
 
     @Id
@@ -20,7 +20,15 @@ public class Curriculum {
     private Integer id;
 
     private String name;
-    private String title;
-    private String email;
 
+    private Boolean active;
+    private Boolean core;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+        name = "curriculum_skill",
+        joinColumns = { @JoinColumn(name = "curriculum_id") },
+        inverseJoinColumns = { @JoinColumn(name = "skill_id") }
+    )
+    private Set<SkillId> skills;
 }
