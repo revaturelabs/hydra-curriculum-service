@@ -3,7 +3,7 @@ addons:
   sonarcloud:
     organization: revaturelabs
     token:
-      secure: etuGjV6bqBBghvjwJ5yOQB0m0d/ynuNS4rEm1ugnQynjyMqrlrs8gxl+o19SGjYPvXl4UQNKgTFmJtaQqsPgB83VlDusZZDDzOa4vkttseCy/+s1zPsTV4ZpcIcWBppPuiEFLZRabj7BuAopHHX0DV1/3kEOb1JgfdiTMSp/ocy6q2MFvQemKmb+lEgBvZHniNoEKp/jfjSSZ5IK0/gZlUCIPOXviMrH8xHq7qjSpYeabqDhF9+zA9rcD/ibpZoz+iqNmbR0/KIgyvoXAd4elvtmOmSk/yyGapt4iFNnvEtQFeNaO+Jf6PeWIbvyIQYLex9WRsoq9TVqfB6gctbBZEB9UUTTuKWncDSdPGVkshkmgRA3BTU7eWehp2LkCgf7T3d2i73jLPZAS2RnG12sq+Q3wl9rrjkH8+tdeWtcLjCz0eQNd+6YRUw7uMmKgJgMB5qmOnc5i1YJiVjpo1zLvqLTNnoZpm91rJBCPwAFZ0XcqzCaIJpfGYbEpXzcM+UtdRaoDWwcTv5nAPE+egYkRrls0zDbuwbbON15KERxjnbMZoyKc1w7yu5dOSHzL+lTzI6x4qmrPdGqkr3i+xZcwU4iCEEbdxy14GVecIhJ4SBtzMmGpCetI5mryWgAg/JrY7LqX3DHBcYCikwroHQaui3jTLiwydIj4BDxlCUnUxU=
+      secure: n5n1uq3+TqX4eNj6ytpqw+4qYutRN7Jt1vUuBNF2kNlHoi9pWdmqy+ymSumvA+9cCxmxxxGBhI90diDdrJ4lPMFNido8NxNcB0AosBc5Ox4SxhOlHJYBMvmd5U/3nraMc+dE5AwG6fUtjFxvr3aYl3KeYwqsh42TsX+uoCW0l0p9JQM5RZPFOJG15XQrnxDyAJ/zQYb1hoC5hjEJpAcP5/piI8njCFMlqMRN+9L0JAycYGANUL/00qYTYSGI7EeyXawGNqGjDlbeXPbX0ajJO0HdC9TbnWwohHqpHsx5SsfocZTyGAL86b8O31KPTfkzyKfEqLhbRoik/L6Qx5wAseHHL68qsRdyu+yo3T47e/YE0eU0r1W4VEXpN2wy7AFdnmvaTaHPQ3kMyW5e/Hyum6Z6NfKxhc1vEuN+f06x17jJXMW4trIHHOtgreiFTHG0vE17nCpERIm7/wLkyMWCKCXtZR7NfFFkTaWrtyKeHWcPNTjtmMOoRgTfitQtMEMrGDR8gscdnGTSue8L7/1HxNtMe9x5cO9k54EeWr6MqLd2wB2mp5BusBGS9vOfrXSwW+ecCdX+dG+WGiUNztaYoTMjC40QCn9vivHtNDFkjGBgUlJNpzA44nETdIdLEtAQDjGHlr/twcBhHgo7SMZ1+LaJH8f/iOXX5Lj9e70jSQU=
 script:
 - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.host.url=https://sonarcloud.io
 deploy:
@@ -22,3 +22,4 @@ cache:
   directories:
   - "$HOME/.m2/repository"
   - "$HOME/.sonar/cache"
+
